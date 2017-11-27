@@ -53,6 +53,10 @@ group :development do
   #gem 'spring'
 end
 
+group :production do
+	gem 'dragonfly-s3_data_store'	
+end
+
 gem 'refinerycms', '~> 3.0.0'
 gem 'refinerycms-authentication-devise', '~> 1.0'
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.7']
