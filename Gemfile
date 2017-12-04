@@ -60,4 +60,6 @@ end
 gem 'refinerycms', '~> 3.0.0'
 gem 'refinerycms-authentication-devise', '~> 1.0'
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.7']
+gem 'refinerycms-page-images', '~> 3.0.0', github: "refinery/refinerycms-page-images", branch: "master"
+
 

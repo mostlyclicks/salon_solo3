@@ -2,21 +2,94 @@
 <%= render "/refinery/html_tag" %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
+    <meta name="Description" content="Salon Solo is a full service salon and spa located in La Crosse WI. Our services include hair styling, hair cuts, color, nail services, massage and aesthetic services.">
     <%= render "/refinery/head" %>
-    <%= render "/refinery/javascripts" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie|Dawning+of+a+New+Day|Sacramento|Amatic+SC' rel='stylesheet' type='text/css'>
+
   </head>
-  <body id="<%= canonical_id @page %>" class="<%= view_template_class @page %>">
+  
+  <body id="<%= canonical_id @page %>" >
     <%= site_bar -%>
-    <div id="page_container">
-      <header id="header">
-        <%= render "/refinery/header" -%>
+    <div id="page_container" >
+
+      <header id="header" style="height:0px;">
+        <!-- see /refinery/headers for options for headers above xs -->
+        <div class="hidden-xs"><%#= render "/refinery/headers/header_nobg" -%></div>
+                              <%#= render "/refinery/headers/header_fixed_top" -%>
+                              <%#= render "/refinery/headers/header_navbar_default" -%>
+                              <%#= render "/refinery/headers/header_nobg" -%>
+
+        <!-- default xs nav -->
+        <div class="visible-xs"><%#= render "/refinery/headers/header_fixed_top" -%></div>
       </header>
-      <section id="page">
-        <%= yield %>
-      </section>
-      <footer>
-        <%= render "/refinery/footer" -%>
-      </footer>
+      <div class="container-fluid" style="padding:0; margin:0;">
+              <%= yield %>
+      </div>
+
+<!-- <div id="products">
+  <div class="container">
+    <div class="col-md-3">
+      <%#= image_tag 'logo-pureology.png', class: 'img-responsive' %>
     </div>
+    <div class="col-md-3">
+      <%#= image_tag 'logo-cnd.png', class: 'img-responsive' %>
+    </div>
+    <div class="col-md-3">
+      <%#= image_tag 'logo-osmosis.png', class: 'img-responsive' %>
+    </div>
+    <div class="col-md-3">
+      <%#= image_tag 'logo-opi.png', class: 'img-responsive' %>
+    </div>
+  </div>
+</div> -->
+
+      
+      <div class="" id="footer">
+  <div class="container">
+    <div class="row" style="">
+      <div class="col-md-4">
+        <h1>Our new location</h1>
+        <p class="lead">Salon Solo has moved (a little).<br />We are now located on the west side of HWY 16 just south of Gillette street and Plaza 16.</p>
+        <p class="lead">Salon Solo<br />
+          N3363 State Hwy 16<br />
+          La Crosse, Wisconsin 54601</p>
+
+        <!-- google-maps -->
+        <%#= raw @page.content_for(:map) %>
+      </div>
+      <div class="col-md-4">
+        <h1>Connect with Salon Solo</h1>
+        <p class="lead">
+          <i class="fa fa-phone-square"></i> (608) 782-1243<br />
+          <a href="https://www.facebook.com/pages/Salon-soLo/212657592093798"><i class="fa fa-facebook-square fa-1x"></i> Like us on Facebook</a>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h1>Gift Cards</h1>
+        <p class="lead">Gift cards from Salon Solo make great presents for loved ones and friends. Please call or stop in for more information.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sub-footer">
+  <div class="container-fluid">
+    <div class="col-md-12 text-center">
+      <small>&copy; <%= Time.now.strftime('%Y') %>. All Rights Reserved. | Salon Solo, LLC</small>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+    </div>
+    <%= render "/refinery/javascripts" %>
   </body>
 </html>
+
