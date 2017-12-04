@@ -55,6 +55,7 @@ end
 
 group :production do
 	gem 'dragonfly-s3_data_store'	
+	gem "puma"
 end
 
 gem 'refinerycms', '~> 3.0.0'
