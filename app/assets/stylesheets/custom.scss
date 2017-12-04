@@ -86,20 +86,20 @@ body {
     font-size:30px;
   }
   h1 {
-    font-family: $font-chalk1;
+    font-family: $font-chalk5;
     font-size:3em;
   
   }
 
-  #chalk2 {
+/*  #chalk2 {
     border-right:1px dotted $white * .5;
-  }
+  }*/
 
   #chalk5 {
     border-right:1px dotted $white * .5;
   }
 
-  #chalk2 h1, #chalk2 p {
+/*  #chalk2 h1, #chalk2 p {
     font-family: $font-chalk2;
   }
   #chalk3 h1, #chalk3 p  {
@@ -107,7 +107,7 @@ body {
   }
   #chalk4 h1, #chalk4 p {
     font-family: $font-chalk4;
-  }
+  }*/
   #chalk5 h1, #chalk5 p {
     font-family: $font-chalk5;
   }
